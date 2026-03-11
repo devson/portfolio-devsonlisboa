@@ -10,7 +10,7 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <PremiumImage
-          src="/placeholders/hero-bg.jpg" // Will need to be replaced by a real high-res architectural image
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop" // Architectural exterior
           alt="Projetos de Arquitetura Devson Lisboa"
           fill
           priority

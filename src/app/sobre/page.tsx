@@ -23,8 +23,8 @@ export default function SobrePage() {
       <Reveal delay={0.2} className="w-full px-6 md:px-12 max-w-7xl mx-auto mb-24">
         <div className="relative aspect-[21/9] w-full bg-warm-gray overflow-hidden">
           <PremiumImage
-            src="/placeholders/office.jpg"
-            alt="Studio Devson Lisboa"
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop"
+            alt="Estúdio Devson Lisboa"
             fill
             className="grayscale contrast-125 object-cover"
             priority

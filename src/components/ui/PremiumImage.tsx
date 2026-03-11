@@ -51,9 +51,6 @@ export function PremiumImage({
               : "scale-100 blur-0 grayscale-0"
         )}
         onLoad={() => setLoading(false)}
-        // We use unoptimized for the placeholder route, but you would
-        // remove this if using real remote images that need Next.js optimization.
-        unoptimized={src.startsWith("/placeholders")}
       />
     </div>
   );

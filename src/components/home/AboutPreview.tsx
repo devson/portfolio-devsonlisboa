@@ -12,8 +12,8 @@ export function AboutPreview() {
         <div className="w-full md:w-1/2 order-2 md:order-1">
           <Reveal className="relative aspect-[3/4] w-full max-w-md mx-auto md:ml-0 overflow-hidden">
             <PremiumImage
-              src="/placeholders/profile.jpg"
-              alt={siteData.about.name}
+              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=800&auto=format&fit=crop"
+              alt="Arquiteto Devson Lisboa"
               fill
               className="grayscale contrast-125 object-cover"
             />

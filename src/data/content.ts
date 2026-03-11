@@ -49,15 +49,15 @@ export const siteData = {
       title: "Residência Minimal S",
       category: "Arquitetura",
       slug: "residencia-minimal-s",
-      thumbnail: "/placeholders/proj-1.jpg", 
+      thumbnail: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop", 
       shortDescription: "Um estudo de proporções e luz natural encravado na encosta.",
       challenge: "Criar uma residência que desaparecesse na paisagem, mantendo forte presença brutalista de dentro para fora.",
       concept: "Subtração e materialidade. O projeto se baseia em blocos de concreto exposto que contrastam com painéis de madeira carbonizada, criando uma transição muda com a natureza ao redor.",
       materials: "Concreto aparente, Madeira Shou Sugi Ban, Vidro de alta performance e Aço Corten.",
       gallery: [
-        "/placeholders/proj-1-g1.jpg",
-        "/placeholders/proj-1-g2.jpg",
-        "/placeholders/proj-1-g3.jpg"
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1600607687930-cebc5a81ca5d?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1200&auto=format&fit=crop"
       ]
     },
     {
@@ -65,14 +65,14 @@ export const siteData = {
       title: "Corporate HQ Nexus",
       category: "Interiores",
       slug: "corporate-hq-nexus",
-      thumbnail: "/placeholders/proj-2.jpg",
+      thumbnail: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
       shortDescription: "Sede corporativa projetada para fomentar a criatividade fluida.",
       challenge: "Transformar 2.000m² de laje tradicional em uma paisagem de trabalho que não parecesse um escritório.",
       concept: "Criar 'bairros corporativos'. Utilizamos elementos cálidos e divisórias translúcidas que respeitam a intimidade acústica sem bloquear a luz abundante de leste a oeste.",
       materials: "Mármore Travertino, Nogueira Americana, Vidro Canelado e Painéis Acústicos Premium.",
       gallery: [
-        "/placeholders/proj-2-g1.jpg",
-        "/placeholders/proj-2-g2.jpg"
+        "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop"
       ]
     },
     {
@@ -80,14 +80,14 @@ export const siteData = {
       title: "Torre Áurea",
       category: "Archviz",
       slug: "torre-aurea",
-      thumbnail: "/placeholders/proj-3.jpg",
+      thumbnail: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
       shortDescription: "Série de estudos visuais para lançamento de alto padrão.",
       challenge: "Traduzir a monumentalidade da fachada metálica desenvolvida pelo estúdio de arquitetura parceiro, em imagens que encantassem investidores antes das fundações.",
       concept: "Foco na 'Hora Azul' e 'Luz Dourada'. Capturamos a materialidade do edifício refletindo a vibração urbana, com composições que priorizam o vazio e o céu.",
       materials: "Visualização hiper-realista produzida em Unreal Engine e refinada com fluxos de IA generativa.",
       gallery: [
-        "/placeholders/proj-3-g1.jpg",
-        "/placeholders/proj-3-g2.jpg"
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?q=80&w=1200&auto=format&fit=crop"
       ]
     },
     {
@@ -95,13 +95,13 @@ export const siteData = {
       title: "Pavilhão D'água",
       category: "Arquitetura",
       slug: "pavilhao-agua",
-      thumbnail: "/placeholders/proj-4.jpg",
+      thumbnail: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1200&auto=format&fit=crop",
       shortDescription: "Estrutura efêmera para exibição de arte contemporânea.",
       challenge: "Desenhar um pavilhão temporário, desmontável e visualmente intrigante.",
       concept: "Superfícies reflexivas. Todo o exterior espelha o espelho d'água existente na praça, fazendo a arquitetura quase flutuar.",
       materials: "Estrutura metálica leve, painéis reflexivos de alumínio composto, piso de pedra basalto.",
       gallery: [
-        "/placeholders/proj-4-g1.jpg"
+        "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1200&auto=format&fit=crop"
       ]
     },
     {
@@ -109,14 +109,14 @@ export const siteData = {
       title: "Gen AI: Estudos de Volumetria",
       category: "Fluxos com IA",
       slug: "gen-ai-estudos",
-      thumbnail: "/placeholders/proj-5.jpg",
+      thumbnail: "https://images.unsplash.com/photo-1518099074172-2e47ee6cb394?q=80&w=1200&auto=format&fit=crop",
       shortDescription: "Experimentações ágeis de forma e material através de redes neurais.",
       challenge: "Acelerar a etapa inicial (Estudo Preliminar) mantendo alto padrão estético.",
       concept: "Criação de prompts parametrizados combinados com ControlNet para guiar as IAs estruturalmente. O resultado são imagens inspiracionais prontas em horas em vez de semanas.",
       materials: "Fluxos com Midjourney, Stable Diffusion e Nano Banana Pro.",
       gallery: [
-        "/placeholders/proj-5-g1.jpg",
-        "/placeholders/proj-5-g2.jpg"
+        "https://images.unsplash.com/photo-1518099074172-2e47ee6cb394?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1481253127861-534498168948?q=80&w=1200&auto=format&fit=crop"
       ]
     },
     {
@@ -124,13 +124,13 @@ export const siteData = {
       title: "Visual Narrative: The Void",
       category: "Storytelling Visual",
       slug: "visual-narrative-void",
-      thumbnail: "/placeholders/proj-6.jpg",
+      thumbnail: "https://images.unsplash.com/photo-1473214534440-ad9cdd3fe7b8?q=80&w=1200&auto=format&fit=crop",
       shortDescription: "Ensaios fotográficos virtuais em arquiteturas impossíveis.",
       challenge: "Explorar as emoções do 'espaço vazio' onde a arquitetura é puramente luz e sombra.",
       concept: "Linguagem editorial absoluta. Alto contraste, granulação intencional, enquadramentos quase abstratos que sugerem mais do que revelam.",
       materials: "Renderização PBR, Pós-produção Cinematográfica.",
       gallery: [
-        "/placeholders/proj-6-g1.jpg"
+        "https://images.unsplash.com/photo-1473214534440-ad9cdd3fe7b8?q=80&w=1200&auto=format&fit=crop"
       ]
     }
   ]
