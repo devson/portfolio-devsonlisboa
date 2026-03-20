@@ -16,7 +16,7 @@ export async function getSiteContent(): Promise<Record<string, string>> {
       hero_description: "Projetos que traduzem a ambição da sua marca corporativa ou do seu empreendimento em arquitetura de alto valor percebido.",
       hero_cta_primary_text: "Ver Portfólio",
       hero_cta_secondary_text: "Iniciar Conversa",
-      about_image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=800&auto=format&fit=crop",
+      about_image: "/images/profile.png",
       about_label: "Visão",
       about_quote: "Arquitetura não é sobre preencher espaços. É sobre narrar o vazio.",
       about_description: siteData.about.description,
@@ -25,7 +25,7 @@ export async function getSiteContent(): Promise<Record<string, string>> {
       // Page Sobre Defaults
       sobre_hero_title: "Arquiteto e artista visual com mais de 20 anos transformando visão em espaço.",
       sobre_hero_description: "Base sólida em BIM, interiores corporativos e as mais avançadas estratégias de inteligência artificial aplicada à arquitetura.",
-      sobre_portrait_image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=800&auto=format&fit=crop",
+      sobre_portrait_image: "/images/profile.png",
       sobre_manifesto_title: "Transformar briefing em conceito legível, narrativa espacial e espaços funcionais.",
       sobre_bio_1: "Arquiteto e artista visual com mais de 20 anos de experiência, com base sólida em BIM (Revit) e interiores corporativos. Uma consistência técnica, documentação bem organizada e direção de arte para transformar briefing em conceito legível, narrativa espacial e espaços funcionais que traduzem a cultura do cliente.",
       sobre_bio_2: "Uso IA e render em tempo real para explorar alternativas, materialidade e atmosfera com velocidade e controle, reduzindo retrabalho e acelerando aprovações sem abrir mão do rigor técnico.",
