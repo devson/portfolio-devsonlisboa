@@ -10,6 +10,8 @@ interface ButtonProps {
   variant?: "primary" | "outline" | "text";
   className?: string;
   icon?: boolean;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 }
 
 export function Button({
@@ -19,6 +21,8 @@ export function Button({
   variant = "primary",
   className,
   icon = false,
+  type = "button",
+  disabled = false,
 }: ButtonProps) {
   const baseStyles =
     "inline-flex items-center justify-center gap-2 font-sans font-medium text-sm tracking-wide-editorial uppercase transition-all duration-300 ease-crisp px-6 py-4 relative overflow-hidden group";
@@ -64,8 +68,10 @@ export function Button({
 
   return (
     <button
+      type={type}
+      disabled={disabled}
       onClick={onClick}
-      className={cn(baseStyles, variants[variant], className)}
+      className={cn(baseStyles, variants[variant], className, disabled && "opacity-50 cursor-not-allowed")}
     >
       {content}
     </button>

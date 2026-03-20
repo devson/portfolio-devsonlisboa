@@ -67,9 +67,11 @@ export function Footer() {
 
         <div className="pt-8 border-t border-off-white/10 flex flex-col md:flex-row items-center justify-between gap-4 font-sans text-xs text-off-white/40">
           <p>© {currentYear} {siteData.about.name}. Todos os direitos reservados.</p>
-          <div className="flex gap-6">
+          <div className="flex gap-6 items-center">
             <Link href="#" className="hover:text-off-white transition-colors">Privacidade</Link>
             <Link href="#" className="hover:text-off-white transition-colors">Termos</Link>
+            <span className="w-1 h-1 rounded-full bg-off-white/20"></span>
+            <Link href="/admin" className="hover:text-off-white transition-colors font-medium">Site Admin</Link>
           </div>
         </div>
       </div>

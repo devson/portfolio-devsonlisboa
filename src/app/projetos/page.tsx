@@ -1,21 +1,34 @@
 import { Reveal } from "@/components/ui/Reveal";
-import { Display, Heading, BodyText, Label } from "@/components/ui/Typography";
+import { Display, Heading, Label } from "@/components/ui/Typography";
 import { PremiumImage } from "@/components/ui/PremiumImage";
+import { prisma } from "@/lib/prisma";
 import { siteData } from "@/data/content";
 import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Projetos | ${siteData.about.name}`,
+  title: "Projetos | Devson Lisboa Arquiteto",
   description: "Portfólio de obras selecionadas em arquitetura, interiores e design.",
+  openGraph: {
+    title: "Projetos | Devson Lisboa Arquiteto",
+    description: "Portfólio de obras selecionadas em arquitetura, interiores e design.",
+  },
 };
 
-export default function ProjetosPage() {
-  const projects = siteData.projects;
+export default async function ProjetosPage() {
+  let projects: { id: string; title: string; slug: string; category: string; thumbnail: string; year?: string | null }[] = [];
+
+  try {
+    const dbProjects = await prisma.project.findMany({ orderBy: { createdAt: "desc" } });
+    if (dbProjects.length > 0) projects = dbProjects;
+  } catch {}
+
+  if (projects.length === 0) {
+    projects = siteData.projects.map((p) => ({ id: p.id, title: p.title, slug: p.slug, category: p.category, thumbnail: p.thumbnail }));
+  }
 
   return (
     <div className="flex flex-col w-full pb-32">
-      {/* Header Spacer */}
       <div className="pt-12 px-6 md:px-12 max-w-7xl mx-auto w-full">
         <Reveal>
           <Display className="mb-4">Portfólio</Display>
@@ -29,38 +42,29 @@ export default function ProjetosPage() {
 
       <div className="px-6 md:px-12 max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-24">
-          {projects.map((project, index) => {
-            return (
-              <Reveal 
-                key={project.id} 
-                className="group"
-                delay={(index % 2) * 0.1}
-              >
-                <Link href={`/projetos/${project.slug}`} className="block w-full">
-                  <div className="relative w-full aspect-[4/5] mb-6 overflow-hidden bg-warm-gray">
-                    <PremiumImage
-                      src={project.thumbnail}
-                      alt={project.title}
-                      fill
-                      className="group-hover:scale-[1.03] transition-transform duration-700 ease-crisp"
-                    />
-                    
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-black-obsidian/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                      <div className="bg-background text-foreground uppercase tracking-widest text-[10px] font-medium py-3 px-6 rounded-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-crisp">
-                        Explorar
-                      </div>
+          {projects.map((project, index) => (
+            <Reveal key={project.id} className="group" delay={(index % 2) * 0.1}>
+              <Link href={`/projetos/${project.slug}`} className="block w-full">
+                <div className="relative w-full aspect-[4/5] mb-6 overflow-hidden bg-warm-gray">
+                  <PremiumImage
+                    src={project.thumbnail}
+                    alt={project.title}
+                    fill
+                    className="group-hover:scale-[1.03] transition-transform duration-700 ease-crisp"
+                  />
+                  <div className="absolute inset-0 bg-black-obsidian/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <div className="bg-background text-foreground uppercase tracking-widest text-[10px] font-medium py-3 px-6 rounded-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-crisp">
+                      Explorar
                     </div>
                   </div>
-
-                  <div className="flex flex-col gap-2">
-                    <Label className="mb-2 block">{project.category}</Label>
-                    <h3 className="font-serif text-3xl font-medium tracking-editorial">{project.title}</h3>
-                  </div>
-                </Link>
-              </Reveal>
-            );
-          })}
+                </div>
+                <div className="flex flex-col gap-2">
+                  <Label className="mb-2 block">{project.category}</Label>
+                  <h3 className="font-serif text-3xl font-medium tracking-editorial">{project.title}</h3>
+                </div>
+              </Link>
+            </Reveal>
+          ))}
         </div>
       </div>
     </div>
