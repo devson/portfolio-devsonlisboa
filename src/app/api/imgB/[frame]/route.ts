@@ -4,7 +4,7 @@ import path from "path";
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { frame: string } }
+  { params }: { params: Promise<{ frame: string }> }
 ) {
   try {
     const { frame } = await params;
