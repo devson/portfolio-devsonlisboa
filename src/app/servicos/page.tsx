@@ -1,6 +1,5 @@
 import { Reveal } from "@/components/ui/Reveal";
-import { Display, Heading, BodyText, Label } from "@/components/ui/Typography";
-import { PremiumImage } from "@/components/ui/PremiumImage";
+import { Display, Heading, BodyText } from "@/components/ui/Typography";
 import { siteData } from "@/data/content";
 import type { Metadata } from "next";
 

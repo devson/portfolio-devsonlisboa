@@ -3,7 +3,6 @@
 import { SessionProvider, useSession, signOut } from "next-auth/react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 
 function AdminSidebar() {
   const pathname = usePathname();

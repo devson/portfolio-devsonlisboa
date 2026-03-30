@@ -18,21 +18,21 @@ export default function LoginPage() {
     setError("");
 
     try {
-      const res = await signIn("credentials", {
+      const result = await signIn("credentials", {
         email,
         password,
         redirect: false,
       });
 
-      if (res?.error) {
+      if (result?.error) {
         setError("Credenciais inválidas. Tente novamente.");
         setLoading(false);
       } else {
         router.push("/admin/projetos");
         router.refresh();
       }
-    } catch (err) {
-      setError("Ocorreu um erro ao conectar.");
+    } catch {
+      setError("Ocorreu um erro ao tentar fazer login.");
       setLoading(false);
     }
   };

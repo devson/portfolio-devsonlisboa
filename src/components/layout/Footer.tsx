@@ -38,6 +38,14 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link 
+                  href="/admin"
+                  className="font-sans font-medium text-sm hover:text-accent-bronze transition-colors duration-300 text-off-white/70"
+                >
+                  Área Admin
+                </Link>
+              </li>
             </ul>
           </div>
 
