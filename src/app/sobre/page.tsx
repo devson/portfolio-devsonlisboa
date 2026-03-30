@@ -44,6 +44,7 @@ export default async function SobrePage() {
     { name: "Google AI Studio", category: "IA" },
     { name: "Higgsfield", category: "IA" },
     { name: "Sora", category: "IA" },
+    { name: "Freepik", category: "Assets" },
   ]);
 
   const education = parseArray("sobre_education", [
@@ -224,29 +225,56 @@ export default async function SobrePage() {
           </Reveal>
 
           <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-8 md:gap-12 items-center">
-            {tools.map((tool: any, i: number) => (
-              <Reveal key={i} delay={i * 0.05}>
-                <div className="group flex flex-col items-center gap-4 text-center grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
-                  <div className="w-10 h-10 md:w-12 md:h-12 relative flex items-center justify-center">
-                    {tool.logo ? (
-                      <img 
-                        src={tool.logo} 
-                        alt={tool.name} 
-                        className="w-full h-full object-contain filter drop-shadow-sm" 
-                      />
-                    ) : (
-                      <div className="w-full h-full border border-foreground/10 flex items-center justify-center text-[10px] font-mono">
-                        {tool.name.substring(0,2).toUpperCase()}
-                      </div>
-                    )}
+            {tools.map((tool: any, i: number) => {
+              const iconSlugs: Record<string, string> = {
+                "Revit": "autodeskrevit",
+                "Rhino": "rhinoceros",
+                "Unreal Engine": "unrealengine",
+                "SketchUp": "sketchup",
+                "3D Max": "autodesk", 
+                "AutoCAD": "autocad",
+                "Google AI Studio": "google",
+                "Freepik": "freepik"
+              };
+
+              const customLogos: Record<string, string> = {
+                "D5 Render": "/images/icones/d5.png",
+                "Corona": "/images/icones/corona.svg",
+                "Higgsfield": "/images/icones/Higgsfield.png",
+                "V-Ray": "/images/icones/v-ray.png",
+                "Adobe PS": "/images/icones/ps.png",
+                "Premiere": "/images/icones/pr.png",
+                "After Effects": "/images/icones/ae.png",
+                "Sora": "/images/icones/sora.png"
+              };
+              
+              const slug = iconSlugs[tool.name];
+              const logoUrl = slug ? `https://cdn.simpleicons.org/${slug}/000000` : (customLogos[tool.name] || tool.logo);
+
+              return (
+                <Reveal key={i} delay={i * 0.05}>
+                  <div className="group flex flex-col items-center gap-4 text-center opacity-60 hover:opacity-100 transition-opacity duration-500">
+                    <div className="w-10 h-10 md:w-12 md:h-12 relative flex items-center justify-center grayscale">
+                      {logoUrl ? (
+                        <img 
+                          src={logoUrl} 
+                          alt={tool.name} 
+                          className="w-full h-full object-contain" 
+                        />
+                      ) : (
+                        <div className="w-full h-full border border-foreground/20 flex items-center justify-center text-[10px] font-mono text-foreground font-medium">
+                          {tool.name.substring(0,2).toUpperCase()}
+                        </div>
+                      )}
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <span className="font-sans text-[10px] font-medium tracking-widest uppercase">{tool.name}</span>
+                      <span className="font-sans text-[8px] uppercase tracking-widest text-foreground/40">{tool.category}</span>
+                    </div>
                   </div>
-                  <div className="flex flex-col gap-1">
-                    <span className="font-sans text-[10px] font-medium tracking-widest uppercase">{tool.name}</span>
-                    <span className="font-sans text-[8px] uppercase tracking-widest text-foreground/40">{tool.category}</span>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
