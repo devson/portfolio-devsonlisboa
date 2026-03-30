@@ -38,14 +38,7 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link 
-                  href="/admin"
-                  className="font-sans font-medium text-sm hover:text-accent-bronze transition-colors duration-300 text-off-white/70"
-                >
-                  Área Admin
-                </Link>
-              </li>
+
             </ul>
           </div>
 
@@ -79,7 +72,7 @@ export function Footer() {
             <Link href="#" className="hover:text-off-white transition-colors">Privacidade</Link>
             <Link href="#" className="hover:text-off-white transition-colors">Termos</Link>
             <span className="w-1 h-1 rounded-full bg-off-white/20"></span>
-            <Link href="/admin" className="hover:text-off-white transition-colors font-medium">Site Admin</Link>
+            <Link href="/admin" className="hover:text-off-white transition-colors font-medium">mapa</Link>
           </div>
         </div>
       </div>

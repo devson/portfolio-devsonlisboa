@@ -124,9 +124,6 @@ export function AboutPreview({ content }: AboutPreviewProps) {
                 />
               )}
             </div>
-            
-            {/* Decal Border overlay */}
-            <div className="absolute inset-0 border border-off-white/10 m-4 pointer-events-none z-[1]" />
           </Reveal>
         </div>
 
